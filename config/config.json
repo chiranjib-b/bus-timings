@@ -1,0 +1,13 @@
+{
+    "endpoint": "https://datamall2.mytransport.sg/ltaodataservice/v3/BusArrival?BusStopCode={stop_id}",
+    "stops": [
+        {
+            "name": "Bef Toh Tuck Rise",
+            "id": 42201
+        },
+        {
+            "name": "Aft Toh Tuck Rise",
+            "id": 42209
+        }
+    ]
+}
