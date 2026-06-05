@@ -11,5 +11,6 @@
             "id": 42209,
             "direction": "RIGHT"
         }
-    }
+    },
+    "API_CALL_INTERVAL_SECONDS": 30
 }

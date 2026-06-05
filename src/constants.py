@@ -29,3 +29,4 @@ class BusService():
 
 ENDPOINT_TEMPLATE = app_config.get("endpoint")
 STOPS = app_config.get("stops")
+API_CALL_INTERVAL_SECONDS = app_config.get("API_CALL_INTERVAL_SECONDS")
