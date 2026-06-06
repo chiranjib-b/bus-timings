@@ -4,12 +4,14 @@
         "LEFT": {
             "name": "Bef Toh Tuck Rise",
             "id": 42201,
-            "direction": "LEFT"
+            "direction": "LEFT",
+            "columnHeader": "<-- Beauty World MRT"
         },
         "RIGHT": {
             "name": "Aft Toh Tuck Rise",
             "id": 42209,
-            "direction": "RIGHT"
+            "direction": "RIGHT",
+            "columnHeader": "Toh Tuck Ave/Bukit Batok Ave 3 -->"
         }
     },
     "API_CALL_INTERVAL_SECONDS": 30

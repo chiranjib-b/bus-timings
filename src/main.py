@@ -35,7 +35,7 @@ def main():
                         print(f"Processing stop ({direction}): {stop.name}...")
                         
                         bus_data = process_bus_stop(stop.id)
-                        status[direction] = parse_bus_data(bus_data)
+                        status[stop_data['columnHeader']] = parse_bus_data(bus_data)
                     
                     print_dashboard_table(status)
                     display.update_data(status)
