@@ -4,7 +4,7 @@ import sys
 from datetime import datetime, timezone, timedelta
 
 class LCDDisplay:
-    def __init__(self, width=1280, height=800):
+    def __init__(self, width=None, height=None):
         self.width = width
         self.height = height
         
@@ -17,8 +17,17 @@ class LCDDisplay:
 
     def _run_display_loop(self):
         pygame.init()
-        screen = pygame.display.set_mode((self.width, self.height))
+        
+        # Auto-detect screen resolution and use fullscreen mode
+        if self.width is None or self.height is None:
+            info = pygame.display.Info()
+            self.width = info.current_w
+            self.height = info.current_h
+        
+        # Create fullscreen display
+        screen = pygame.display.set_mode((self.width, self.height), pygame.FULLSCREEN)
         pygame.display.set_caption("LTA Transit Live Dashboard")
+        pygame.mouse.set_visible(False)  # Hide mouse cursor for kiosk mode
         clock = pygame.time.Clock()
         
         # Clean, modern sans-serif fonts for clear readability on a 10-inch LCD
